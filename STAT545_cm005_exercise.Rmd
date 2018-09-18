@@ -1,8 +1,4 @@
 ---
-title: "STAT545_cm005_exercise"
-output: html_document
----
----
 title: 'cm005: `dplyr` Exercise'
 output: 
   html_document:
@@ -23,7 +19,6 @@ Change the file output to both html and md _documents_ (not notebook).
 library(gapminder)
 library(tidyverse)
 ```
-
 
 ## `select()`
 
