@@ -183,8 +183,8 @@ Try a scatterplot with:
 - `geom_smooth()`
 
 ```{r}
-install.packages(hexbin)
-gvsl + geom_hex()
+#install.packages(hexbin)
+#gvsl + geom_hex()
 gvsl + geom_density2d()
 gvsl + geom_smooth() +
   geom_point(alpha = 0.2)
