@@ -17,7 +17,8 @@ Let's get:
 
 ```{r}
 gapminder %>% 
-  mutate(gdp = gdpPercap * pop)
+  mutate(gdp = gdpPercap * pop,
+         gdpBill = round(gdp / 10^9, 2))
 
 ```
 
@@ -28,7 +29,8 @@ Try the same thing, but with `transmute` (drops all other variables).
 
 ```{r}
 gapminder %>% 
-  transmute(gdp = gdpPercap * pop)
+  transmute(gdp = gdpPercap * pop,
+            gdpBill = round(gdp / 10^9, 2))
 
 ```
 
@@ -275,6 +277,7 @@ gapminder %>%
   group_by(country) %>% 
   mutate(delta = pop[year == 1972] - pop[year == 1962]) %>% 
   distinct(delta)
+
 ```
 
 
