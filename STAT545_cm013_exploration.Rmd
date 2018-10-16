@@ -60,7 +60,7 @@ p_scales +
     - Change the colour labels to comma format (use `scales::comma_format()`)
 
 ```{r}
-#install.packages("scales")
+install.packages(scales)
 library(scales)
 p_scales +
     scale_x_log10(labels = dollar_format()) +
@@ -78,6 +78,7 @@ p_scales +
 ```{r}
 ## All palettes the come with RColorBrewer:
 install.packages("RColorBrewer")
+library(RColorBrewer)
 RColorBrewer::display.brewer.all()
 p_scales +
     scale_x_log10(labels=dollar_format()) +
