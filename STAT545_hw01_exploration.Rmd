@@ -1,0 +1,34 @@
+---
+title: "STAT545_hw01_dataframe"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(gapminder)
+```
+
+### Here is a preview of the data
+```{r}
+head(gapminder)
+```
+
+### Here is population growth in Canada over time
+
+```{r}
+ plot(pop ~ year, gapminder, subset = country == "Canada", type = "b")
+```
+
+### Here is a summary of the data, including major statistical parameters.
+```{r}
+summary(gapminder)
+```
+
+### Here is a summary of the subset of the year 1960.
+```{r}
+x <- subset(gapminder,year==1952)
+summary(x[["lifeExp"]])
+```
